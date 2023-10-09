@@ -42,6 +42,11 @@ header img{
     align-self: flex-start;
 }
 
+h1{
+    width: 0.001mm;
+    opacity: 0;
+}
+
 header li:nth-child(1){
     display: flex;
     width: 30mm;
@@ -142,10 +147,6 @@ a div:nth-child(4):hover{
     opacity: 0;
 }
 
-h1{
-    width: 0.001mm;
-    opacity: 0;
-}
 
 /* BODY */
 
@@ -167,7 +168,7 @@ main>img{
     animation-duration: 1s;
 }
 
-@keyframes expand{
+@keyframes expand{ /* animation is played upon loading page, making the h1 image grow and shrink */
     0% {width: 250mm;}
     50% {width: 255mm;}
     100% {width: 250mm;}
@@ -240,7 +241,7 @@ video{
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 10px 50px 10px black;
+    box-shadow: 0 10px 50px 10px black;
     margin-bottom: 8mm;
     border-radius: 3mm;
 }
@@ -334,14 +335,6 @@ footer ul{
     flex-direction: column;
 }
 
-footer>p:last-child{
-    text-align: right;
-    color: grey;
-    margin-right: 10mm;
-    margin-bottom: 10mm;
-    font-size: 3mm;
-}
-
 footer h2{
     margin-bottom: 4mm;
     margin-left: 10mm;
@@ -358,6 +351,14 @@ footer ul a{
 
 footer p:nth-child(1){
     margin-left: 5mm;
+}
+
+footer>p:last-child{
+    text-align: right;
+    color: grey;
+    margin-right: 10mm;
+    margin-bottom: 10mm;
+    font-size: 3mm;
 }
 
 /* INDEX SPECIFIC */
@@ -395,16 +396,16 @@ footer p:nth-child(1){
     width: 120mm;
 }
 
+#index section:nth-child(odd) img{
+    margin-right: 5mm;
+}
+
 #index section:nth-child(odd) audio{
     margin-right: 9mm;
 }
 
 #index section:nth-child(even) audio{
     margin-left: 9mm;
-}
-
-#index section:nth-child(odd) img{
-    margin-right: 5mm;
 }
 
 #index section h2{
@@ -437,7 +438,7 @@ footer p:nth-child(1){
     animation-duration: 1s;
 }
 
-@keyframes expand_pod{
+@keyframes expand_pod{ /* animation is played upon loading page, making the h1 image grow and shrink (repeated for different size)*/
     0% {width: 150mm;}
     50% {width: 155mm;}
     100% {width: 150mm;}
@@ -453,61 +454,12 @@ footer p:nth-child(1){
     animation: none;
 }
 
-#pod main section img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5mm;
-    width: 30%;
-}
-
-#pod main section{
-    display: flex;
-    background-color: rgba(0,0,0,0.65);
-    width: 90%;
-    flex-direction: column;
-    padding: 7mm;
-    margin-right: 0mm;
-    margin-left: 15mm;
-}
-
-#pod main section:last-child{
-    margin-bottom: 0;
-}
-
-#pod h2{
-    color: white;
-    margin-bottom: 4mm;
-}
-
-#pod h2:nth-child(3){
-    width: 0.05mm;
-    height: 0.05mm;
-    opacity: 0;
-}
-
 #pod main div{
     display: flex;
     align-content: space-between;
     flex-direction: row-reverse;
     width: 100%;
     margin-right: 20mm;
-}
-
-#pod main div img{
-    display: flex;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0; 
-    margin-bottom: 0;
-    width: 130mm;
-    align-self: flex-start;
-    margin-bottom: 10mm;
-}
-
-#pod main div img:nth-child(2){
-    margin-top: 25mm;
-    width: 100%;
 }
 
 #pod main div div:nth-child(1){
@@ -521,6 +473,64 @@ footer p:nth-child(1){
     flex-direction: column;
 }
 
+#pod main>div:nth-child(6){
+    width: 60%;
+    margin-bottom: 40mm;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.65);
+    padding: 7mm;
+    border-radius: 5mm;
+}
+
+#pod main section{
+    display: flex;
+    background-color: rgba(0,0,0,0.65);
+    width: 90%;
+    flex-direction: column;
+    padding: 7mm;
+    margin-right: 0;
+    margin-left: 15mm;
+}
+
+#pod main section:last-child{
+    margin-bottom: 0;
+}
+
+#pod main section img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5mm;
+    width: 30%;
+}
+
+#pod main div img{
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0; 
+    margin-bottom: 10mm;
+    width: 130mm;
+    align-self: flex-start;
+}
+
+#pod main div img:nth-child(2){
+    margin-top: 25mm;
+    width: 100%;
+}
+
+#pod h2{
+    color: white;
+    margin-bottom: 4mm;
+}
+
+#pod h2:nth-child(3){
+    width: 0.05mm;
+    height: 0.05mm;
+    opacity: 0;
+}
+
 #pod main p{
     margin-top: 0;
     margin-left: 0;
@@ -530,16 +540,6 @@ footer p:nth-child(1){
 #pod main p:last-child{
     margin-top: 3mm;
     margin-left: 0;
-}
-
-#pod main>div:nth-child(6){
-    width: 60%;
-    margin-bottom: 40mm;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(0,0,0,0.65);
-    padding: 7mm;
-    border-radius: 5mm;
 }
 
 #pod main>div:nth-child(5) p{
@@ -554,26 +554,41 @@ footer p:nth-child(1){
     width: 60%;
 }
 
-#contact main>img{
-    margin-top: 0;
-    margin-bottom: 0;
-    width: 150mm;
-    animation-name: expand_contact;
-    animation-duration: 1s;
-}
-
-@keyframes expand_contact{
-    0% {width: 150mm;}
-    50% {width: 152mm;}
-    100% {width: 150mm;}
-}
-
 #contact main>div:nth-child(3){
     display: flex;
     width: 80%;
     flex-direction: column;
     align-content: center;
     margin-bottom: 35mm;
+}
+
+#contact main>div:nth-child(3) div{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10mm;
+    display:flex;
+    width: 80%;
+    flex-direction: row;
+}
+
+#contact main>div:nth-child(3) section{
+    margin: 0;
+    height: auto;
+    padding: 5mm;
+}
+
+#contact main>img{
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 150mm;
+    animation-name: expand_pod;
+    animation-duration: 1s;
+}
+
+@keyframes expand_pod{ /* animation is played upon loading page, making the h1 image grow and shrink (shares same size as pod page)*/
+    0% {width: 150mm;}
+    50% {width: 152mm;}
+    100% {width: 150mm;}
 }
 
 #contact main>div:nth-child(3) img{
@@ -591,25 +606,14 @@ footer p:nth-child(1){
     margin-top: -1mm;
 }
 
-#contact main>div:nth-child(3) section{
-    margin: 0;
-    height: auto;
-    padding: 5mm;
-}
-
-#contact main>div:nth-child(3) div{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10mm;
-    display:flex;
-    width: 80%;
-    flex-direction: row;
-}
-
 #contact main div>h2{
     margin-top: 25mm;
     margin-left: auto;
     margin-right: auto;
+}
+
+#contact h3{
+    font-size: 8mm;
 }
 
 #contact main>p{
@@ -617,27 +621,7 @@ footer p:nth-child(1){
     text-align: center;
 }
 
-#contact h3{
-    font-size: 8mm;
-}
-
 /* PAGE ABOUT US SPECIFIC */
-
-#about main img{
-    margin-top: 10mm;
-    width: 30%;
-}
-
-#about main>img{
-    animation-name: expand_about_us;
-    animation-duration: 1s;
-}
-
-@keyframes expand_about_us{
-    0% {width: 30%;}
-    50% {width: 31%;}
-    100% {width: 30%;}
-}
 
 #about div{
     display: flex;
@@ -650,10 +634,92 @@ footer p:nth-child(1){
     width: 80%;
 }
 
+#about div:nth-child(4){
+    background-color:  rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50mm;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    border-radius: 5mm;
+}
+
+#about div:nth-child(4) div{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 80%;
+}
+
 #about div div{
     display: flex;
     flex-direction: column;
     width: 60%;
+}
+
+#about section{
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 10mm;
+    padding: 7mm;
+}
+
+#about main>section{
+    width: 77%;
+    margin-right: auto;
+    padding: 5mm;
+}
+
+#about div:nth-child(4) section{
+    background: rgb(37, 37, 37);
+    width: 60mm;
+    box-shadow: 0 0 50px 1px black;
+}
+
+#about div:nth-child(4)>section:nth-child(1){
+    display: flex;
+    background: none;
+    box-shadow: none;
+    flex-direction: row;
+    width: 80%;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#about main img{
+    margin-top: 10mm;
+    width: 30%;
+}
+
+#about main>img{
+    animation-name: expand_about_us;
+    animation-duration: 1s;
+}
+
+#about div>img{
+    width: 90mm;
+    height: 90mm;
+    margin-top: 0;
+}
+
+#about div:nth-child(4)>section:nth-child(1) img{
+    width: 10mm;
+    height: 10mm;
+    align-self: center;
+    margin-left: 10mm;
+}
+
+#about section>img{
+    width: 100%;
+    margin-top: 0;
+}
+
+@keyframes expand_about_us{ /* animation is played upon loading page, making the h1 image grow and shrink (repeated for different size)*/
+    0% {width: 30%;}
+    50% {width: 31%;}
+    100% {width: 30%;}
 }
 
 #about main ul{
@@ -664,18 +730,15 @@ footer p:nth-child(1){
     margin-top: 2mm;
 }
 
-#about main>section{
-    width: 77%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5mm;
-}
-
 #about main>section h2{
     margin: 5mm;
     margin-top: 0;
     padding: 0;
     text-align: center;
+}
+
+#about div:nth-child(4) h2{
+    padding: 5mm;
 }
 
 #about main>section p{
@@ -687,18 +750,6 @@ footer p:nth-child(1){
     color: lightgray;
 }
 
-#about div:nth-child(4){
-    background-color:  rgb(20, 20, 20);
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50mm;
-    margin-right: auto;
-    margin-left: auto;
-    width: 80%;
-    border-radius: 5mm;
-
-}
-
 #about div:nth-child(4) p{
     margin: 0;
     text-align: center;
@@ -706,40 +757,8 @@ footer p:nth-child(1){
     align-self: center;
 }
 
-#about div:nth-child(4)>section:nth-child(1){
-    display: flex;
-    background: none;
-    box-shadow: none;
-    flex-direction: row;
-    width: 80%;
-}
-
 #about div:nth-child(4)>section:nth-child(1) p{
     color: gray;
-}
-
-#about div:nth-child(4) div{
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    width: 80%;
-}
-
-#about div:nth-child(4) section{
-    background: rgb(37, 37, 37);
-    width: 60mm;
-    box-shadow: 0px 0px 50px 1px black;
-    margin-left: auto;
-}
-
-#about div:nth-child(4) h2{
-    padding: 5mm;
-}
-
-#about div:nth-child(4)>section:nth-child(1){
-    margin-left: 0;
-    margin-bottom: 0;
-    padding: 0;
 }
 
 #about div:nth-child(4) a{
@@ -761,35 +780,6 @@ footer p:nth-child(1){
     background: white;
 }
 
-#about section{
-    margin-left: auto;
-    margin-right: 0;
-    margin-bottom: 10mm;
-    padding: 7mm;
-}
-
-#about div>img{
-    width: 90mm;
-    height: 90mm;
-    margin-top: 0mm;
-}
-
-#about div:nth-child(4)>section:nth-child(1) img{
-    width: 10mm;
-    height: 10mm;
-    align-self: center;
-    margin-left: 10mm;
-}
-
-#about section>img{
-    width: 100%;
-    margin-top: 0;
-}
-
-#about footer section{
-    padding:0;
-    margin-bottom: 0;
-}
 
 
 
